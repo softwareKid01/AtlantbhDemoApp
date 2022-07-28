@@ -6,7 +6,8 @@ import org.openqa.selenium.WebDriver;
 
 public class AddressesPage {
     private WebDriver driver;
-    private By proceedButtonAddress = By.xpath("//button[name='processAddress']");
+    private By proceedButtonAddress = By.xpath(
+            "//button[@type=\"submit\"]/span[contains(text(), \"Proceed to checkout\")]");
 
     JavascriptExecutor js = (JavascriptExecutor) driver;
     public AddressesPage(WebDriver driver) {

@@ -15,7 +15,6 @@ public class ShippingPage {
     }
 
     public void scrollDown(){
-
         js.executeScript("window.scrollBy(0,500);");
     }
 

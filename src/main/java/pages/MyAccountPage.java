@@ -14,8 +14,5 @@ public class MyAccountPage {
     public MainPage clickWomenLink(){
         driver.findElement(womenLink).click();
         return new MainPage(driver);
-
     }
-
-
 }

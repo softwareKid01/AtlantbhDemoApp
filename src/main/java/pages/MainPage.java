@@ -1,6 +1,7 @@
 package pages;
 
 
+import dev.failsafe.internal.util.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -11,8 +12,6 @@ public class MainPage {
 
     private WebDriver driver;
     JavascriptExecutor js = (JavascriptExecutor) driver;
-//    private By addToCartsButton = By.cssSelector(
-//            "li[class='ajax_block_product last-item-of-tablet-line col-xs-12'] a[title='Add to cart'] span");
     private By addToCartsButton2 = By.cssSelector("a[title='Add to cart']");
     private By continueShopping = By.cssSelector("span[title='Continue shopping'] span:nth-child(1)");
     private By carts = By.cssSelector("a[title='View my shopping cart']");
@@ -22,10 +21,7 @@ public class MainPage {
         this.driver = driver;
     }
 
-
-    //Scroll Down
     public void scrollDown(){
-
         js.executeScript("window.scrollBy(0,1300);");
     }
     public void clickAddToCarts(){
@@ -40,14 +36,7 @@ public class MainPage {
         js.executeScript("window.scrollBy(0,-1300);");
     }
      public ShoppingCartsSummary hoverCarts(){
-         WebElement cart = driver.findElement(carts2);
-         Actions action = new Actions(driver);
-         action.moveToElement(cart).click();
+         driver.findElement(carts).click();
          return new ShoppingCartsSummary(driver);
      }
-
-
-
-
-
 }

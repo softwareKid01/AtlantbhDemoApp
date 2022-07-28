@@ -20,7 +20,4 @@ public class OrderSummaryPage {
         driver.findElement(confirmOrder).click();
         return new OrderConfirmationPage(driver);
     }
-
-
-
 }

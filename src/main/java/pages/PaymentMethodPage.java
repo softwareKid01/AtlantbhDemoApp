@@ -6,7 +6,7 @@ import org.openqa.selenium.WebDriver;
 
 public class PaymentMethodPage {
     private WebDriver driver;
-    private By bankWire = By.className("a[class='bankwire']");
+    private By bankWire = By.xpath("//a[@href='http://automationpractice.com/index.php?fc=module&module=bankwire&controller=payment']");
     JavascriptExecutor js = (JavascriptExecutor) driver;
     public PaymentMethodPage(WebDriver driver) {
         this.driver = driver;
